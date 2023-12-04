@@ -4,8 +4,13 @@ const config = require('../config/config');
 const connectDB = async () => {
     
   try {
-    
-    const conn = await mongoose.connect(process.env.MONGO_URL);
+    mongoose.set('debug', true);
+    var options = {
+   // logger: console.log,
+   // loggerLevel: 'info',
+   // poolSize: 10
+}
+    const conn = await mongoose.connect(process.env.MONGO_URL,options);
    
     console.log(
       `Conneted To Mongodb Databse ${conn.connection.host}`.bgMagenta.white

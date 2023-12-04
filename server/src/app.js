@@ -6,6 +6,7 @@ const connectDB = require('./config/database');
 connectDB();
 const userRouter = require("./routes/users/users.routes");
 const authRouter = require("./routes/auth/auth.routes");
+const postRouter = require("./routes/posts/posts.routes");
 
 const {adminAuth} = require("./middlewares/adminAuth");
 const app = express();
@@ -17,6 +18,7 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 //app.use("/launches",launchRouter);
 app.use("/auth", authRouter);
 app.use("/users", adminAuth, userRouter);
+app.use("/posts", adminAuth, postRouter);
 
 
 app.get('/*', (req, res) => {

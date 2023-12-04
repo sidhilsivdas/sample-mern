@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 3
+    },
+    "auditLog": "C:\\ProTools\\tests\\sample-mern\\server\\data\\.50acf6b51990dc4f5b203a4aa137bea89761f3b8-audit.json",
+    "files": [
+        {
+            "date": 1701529237877,
+            "name": "C:\\ProTools\\tests\\sample-mern\\server\\data\\logs.2023-12-02",
+            "hash": "9f6be41ec7390b15f974be5eccffa24029e552daf8a6b96abbe18155fcc22b57"
+        },
+        {
+            "date": 1701577608577,
+            "name": "C:\\ProTools\\tests\\sample-mern\\server\\data\\logs.2023-12-03",
+            "hash": "b89f02b87a243a8106e31d0b515c0cc5a854b07e271f737c04c336f12fceb1e8"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -1,7 +1,44 @@
+
 POST http://localhost:8000/auth/login
+Content-type: application/json
 
 {
-    
+    "email": "test@test.com",
+    "password": "1111"
 }
 
-####mongodb+srv://ecommers_app_user:fzb9eqEfZ6ARRu35@cluster0.6idtihz.mongodb.net/sample_app?retryWrites=true&w=majority
+
+###
+POST http://localhost:8000/auth/register-user
+Content-type: application/json
+
+{
+    "name": "sidhil",
+    "email": "test@test.com",
+    "password": "1111"
+
+}
+
+
+###
+POST http://localhost:8000/posts
+Content-type: application/json
+access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NmI1NjFhNzJlM2M1MDJlZmY0N2VhYSIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsImlhdCI6MTcwMTU4MDExMn0.NuTmgd1Sj7jPAHJyjTkWWpSZf0F_xen8NjXSpXpgh4U
+
+{
+    "title": "tile",
+    "body": "body1"
+    
+
+}
+
+###
+GET http://localhost:8000/posts
+Content-type: application/json
+access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NmI1NjFhNzJlM2M1MDJlZmY0N2VhYSIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsImlhdCI6MTcwMTU4MDExMn0.NuTmgd1Sj7jPAHJyjTkWWpSZf0F_xen8NjXSpXpgh4U
+
+{
+	
+}
+
+

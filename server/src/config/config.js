@@ -8,10 +8,10 @@ const envValidation = Joi.object()
     .keys({
         NODE_ENV: Joi.string().valid('development', 'production', 'test').required(),
         PORT: Joi.number().default(3000),
-        DB_HOST: Joi.string().default('localhost'),
-        DB_USER: Joi.string().required(),
-        DB_PASS: Joi.string().allow(null, ''),
-        DB_NAME: Joi.string().required(),
+        //DB_HOST: Joi.string().default('localhost'),
+        //DB_USER: Joi.string().required(),
+        //DB_PASS: Joi.string().allow(null, ''),
+        //DB_NAME: Joi.string().required(),
         JWT_SECRET: Joi.string().required().description('JWT secret key'),
         JWT_ACCESS_EXPIRATION_MINUTES: Joi.number()
             .default(30)
@@ -47,10 +47,10 @@ if (error) {
 module.exports = {
     nodeEnv: envVar.NODE_ENV,
     port: envVar.PORT,
-    dbHost: envVar.DB_HOST,
-    dbUser: envVar.DB_USER,
-    dbPass: envVar.DB_PASS,
-    dbName: envVar.DB_NAME,
+    //dbHost: envVar.DB_HOST,
+   // dbUser: envVar.DB_USER,
+    //dbPass: envVar.DB_PASS,
+    //dbName: envVar.DB_NAME,
     mongoUrl:envVar.MONGO_URL,
     jwt: {
         secret: envVar.JWT_SECRET,
