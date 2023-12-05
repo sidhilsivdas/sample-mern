@@ -21,7 +21,7 @@ Content-type: application/json
 
 
 ###
-POST http://localhost:8000/posts
+GET http://localhost:8000/admins
 Content-type: application/json
 access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NmI1NjFhNzJlM2M1MDJlZmY0N2VhYSIsImVtYWlsIjoidGVzdEB0ZXN0LmNvbSIsImlhdCI6MTcwMTU4MDExMn0.NuTmgd1Sj7jPAHJyjTkWWpSZf0F_xen8NjXSpXpgh4U
 
@@ -42,3 +42,30 @@ access-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NmI1NjFhNzJlM2M1MD
 }
 
 
+#####
+POST http://localhost:8000/invoices/
+Content-type: application/json
+
+{
+    "date": "2023-12-05 12:00:00",
+    "InvoiceNumber": "123",
+    "CustomerName": "John",
+    "BillingAddress": "b address",
+    "ShippingAddress": "sample address",
+    "GSTIN": "123456",
+    "TotalAmount": 1000,
+    "InvoiceItems": [
+        {
+            "itemName": "item bname",
+            "Quantity": 100,
+            "Price": 200,
+            "Amount": 2000
+        }
+    ],
+    "InvoiceBillSundry": [
+        {
+            "billSundryName": "ss name",
+            "Amount": 100
+        }
+    ]
+}

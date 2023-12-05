@@ -1,0 +1,1 @@
+{"level":"error","message":"req.body.InvoiceItems.foreach is not a function","stack":"TypeError: req.body.InvoiceItems.foreach is not a function\n    at createInvoice (C:\\ProTools\\tests\\sample-mern\\server\\src\\routes\\invoices\\invoice.controller.js:42:35)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"}

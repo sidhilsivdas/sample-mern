@@ -7,6 +7,8 @@ connectDB();
 const userRouter = require("./routes/users/users.routes");
 const authRouter = require("./routes/auth/auth.routes");
 const postRouter = require("./routes/posts/posts.routes");
+const adminRouter = require("./routes/admins/admin.route");
+const invoiceRouter = require("./routes/invoices/invoice.routes");
 
 const {adminAuth} = require("./middlewares/adminAuth");
 const app = express();
@@ -19,6 +21,8 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use("/auth", authRouter);
 app.use("/users", adminAuth, userRouter);
 app.use("/posts", adminAuth, postRouter);
+app.use("/admins", adminAuth, adminRouter);
+app.use("/invoices", invoiceRouter);
 
 
 app.get('/*', (req, res) => {
