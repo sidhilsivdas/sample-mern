@@ -39,10 +39,7 @@ const invoiceController = {
             
             let invoice = await invoiceModel.create({date, InvoiceNumber});
 
-            req.body.InvoiceItems.foreach( async (item , idx) => {
-                let invoiceItem = await invoiceItemModel.create({itemName:item.itemName, Quantity:item.Quantity,invoice})
-            });
-            //priyanshu.b@altiushub.com
+           
 
             
 
